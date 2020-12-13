@@ -2,7 +2,7 @@ class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :destroy]
 
   def new
-    @cart = cart.new
+    @cart = Cart.new
   end
 
   def create
