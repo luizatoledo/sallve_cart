@@ -1,27 +1,9 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :destroy]
-
-  def new
-    @cart = cart.new
-  end
-
-  def create
-    @cart = Cart.new(cart_params)
-  end
-
   def show
+    @cart_skus = @cart.cart_skus
+
   end
 
   def destroy
-  end
-
-  private
-
-  def set_cart
-    @cart = Cart.find(params[:id])
-  end
-
-  def cart_params
-    params.require(:cart)
   end
 end

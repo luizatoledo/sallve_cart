@@ -1,5 +1,5 @@
 <div class="main-container d-flex">
-  <div class="product-cards-container">
+  <div class="product-cards-container flex-grow-1">
     <% @products.each do |product| %>
       <div class="product-card">
         <div class="product-card-img-div">
@@ -10,6 +10,14 @@
           <span class="product-card-price"><%= product.sku.price %></span>
         </div>
       </div>
+    <% end %>
+  </div>
+  <div class="cart-container">
+    <% if @cart.products == [] %>
+    <span>Ops! Sua sacola ainda está vazia.</span>
+    <span>Vem cá descobrir nossas fórmulas e esoclher a sua</span>
+    <% else %>
+      <% render 'carts/show' %>
     <% end %>
   </div>
 </div>

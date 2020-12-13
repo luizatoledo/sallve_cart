@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # "/" goes to products index display
   root to: 'products#index'
   # carts controller
-  resources :carts, only: [:new, :create, :show, :destroy]
+  resources :carts, only: [:show, :destroy]
   # products controller
   resources :produtcs, only: [:index]
 end
