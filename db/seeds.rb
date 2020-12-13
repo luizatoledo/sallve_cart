@@ -41,7 +41,7 @@ limpador.photo.attach(io: limpador_pic, filename:'limpador.png', content_type: '
 
 # Hidratante Labial
 labial = Product.create!(name: 'Hidratante Labial')
-labial_pic = URI.open('https://cdn.shopify.com/s/files/1/0074/3486/2639/products/sallve-hidratante-labial-6_grande.jpg?v=1605557686')
+labial_pic = URI.open('https://cdn.shopify.com/s/files/1/0074/3486/2639/products/sallve-hidratante-labial-1.jpg?v=1605541986')
 labial.photo.attach(io: labial_pic, filename:'labial.png', content_type: 'image/png')
 
 # Bálsamo Demaquilante

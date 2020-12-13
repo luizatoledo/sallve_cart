@@ -1,5 +1,5 @@
 <div class="main-container d-flex">
-  <div class="product-cards-container">
+  <div class="product-cards-container flex-grow-1">
     <% @products.each do |product| %>
       <div class="product-card">
         <div class="product-card-img-div">
@@ -11,5 +11,7 @@
         </div>
       </div>
     <% end %>
+  </div>
+  <div class="cart-container">
   </div>
 </div>
