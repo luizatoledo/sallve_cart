@@ -78,9 +78,9 @@ sku_labial = Sku.new(sku: 7, inventory: 8, price: 24.9)
 sku_labial.product = labial
 sku_labial.save!
 
-sku_balsamo = Sku.new(sku: 8, inventory: 4, price: 69.9)
-sku_balsamo.product = balsamo
-sku_balsamo.save!
+sku_demaquilante = Sku.new(sku: 8, inventory: 4, price: 69.9)
+sku_demaquilante.product = demaquilante
+sku_demaquilante.save!
 
 # Carts
 cart = Cart.create!
@@ -96,4 +96,4 @@ cart_sku_2.sku = sku_labial
 
 cart_sku_2 = CartSku.new
 cart_sku_2.cart = cart
-cart_sku_2.sku = sku_balsamo
+cart_sku_2.sku = sku_demaquilante
