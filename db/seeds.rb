@@ -82,18 +82,24 @@ sku_demaquilante = Sku.new(sku: 8, inventory: 4, price: 69.9)
 sku_demaquilante.product = demaquilante
 sku_demaquilante.save!
 
-# Carts
-cart = Cart.create!
+# # Carts
+# cart = Cart.create!
 
-# Cart_skus
-cart_sku_1 = CartSku.new
-cart_sku_1.cart = cart
-cart_sku_1.sku = sku_limpador
+# # Cart_skus
+# cart_sku_1 = CartSku.new
+# cart_sku_1.cart = cart
+# cart_sku_1.sku = sku_limpador
+# cart_sku_1.amount = 2
+# cart_sku_1.save!
 
-cart_sku_2 = CartSku.new
-cart_sku_2.cart = cart
-cart_sku_2.sku = sku_labial
+# cart_sku_2 = CartSku.new
+# cart_sku_2.cart = cart
+# cart_sku_2.sku = sku_labial
+# cart_sku_2.amount = 1
+# cart_sku_2.save!
 
-cart_sku_2 = CartSku.new
-cart_sku_2.cart = cart
-cart_sku_2.sku = sku_demaquilante
+# cart_sku_3 = CartSku.new
+# cart_sku_3.cart = cart
+# cart_sku_3.sku = sku_demaquilante
+# cart_sku_3.amount = 1
+# cart_sku_3.save!
