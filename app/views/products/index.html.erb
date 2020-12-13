@@ -16,6 +16,8 @@
     <% if @cart.products == [] %>
     <span>Ops! Sua sacola ainda está vazia.</span>
     <span>Vem cá descobrir nossas fórmulas e esoclher a sua</span>
+    <% else %>
+      <% render 'carts/show' %>
     <% end %>
   </div>
 </div>
