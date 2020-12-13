@@ -1,11 +1,14 @@
 <div class="cart-products-container d-flex">
-  <% @cart_skus each do |sku| %>
+  <% @cart_skus each do |cart_sku| %>
     <div class="cart-product-card">
       <div class="cart-product-img-div"></div>
+        <%= cl_image_tag cart_sku.sku.product.photo.key, class: "cart-product-img" %>
       <div class="cart-product-infos">
-        <div class="cart-product-name"></div>
-        <div class="cart-product-amount"></div>
-        <div class="cart-product-total-price"></div>
+        <div class="cart-product-name"><%= cart_sku.sku.product.name %></div>
+        <div class="cart-product-skunum"><%= cart_sku.sku.sku %></div>
+        <div class="cart-product-amount"><%= q = cart_sku.amount %></div>
+        <div class="cart-product-unit-price"><%= p = cart_sku.sku.product.price %></div>
+        <div class="cart-product-total-price"><%= p * q %></div>
       </div>
     </div>
   <% end %>
