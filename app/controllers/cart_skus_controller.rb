@@ -14,7 +14,7 @@ class CartSkusController < ApplicationController
   def update
     @cart_sku = CartSku.find(params[:id])
     @cart_sku.update(amount: params[:amount])
-    render json: @cart_sku
+    render json: @cart_sku.total_price
   end
 
   def destroy

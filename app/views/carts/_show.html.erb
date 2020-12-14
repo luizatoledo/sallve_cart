@@ -13,8 +13,8 @@
               <% end %>
             </div>
             <div class="cart-sku-id d-none"><%= cart_sku.id %></div>
-            <div class="cart-product-unit-price">R$<%= p = cart_sku.sku.price %></div>
-            <div class="cart-product-total-price">R$ total</div>
+            <div class="cart-product-unit-price">Unitário R$<%= p = cart_sku.sku.price %></div>
+            <div class="cart-product-total-price">Total R$<%= cart_sku.total_price %></div>
           </div>
         </div>
         <div class="remove-from-cart">
