@@ -9,15 +9,24 @@
           <span class="product-card-name"><%= product.name %></span>
           <span class="product-card-price"><%= product.sku.price %></span>
         </div>
+        <div class="add-to-card-button">
+          <%= simple_form_for(@cart_sku) do |f| %>
+            <%= f.hidden_field :sku_id, value: product.sku.id %>
+            <%= f.hidden_field :cart_id, value: @cart.id %>
+            <%= f.hidden_field :amount, value: 1 %>
+            <%= f.button :submit, "Comprar", class: "btn btn-block"%>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>
+
   <div class="cart-container">
-    <% if @cart.products == [] %>
-    <span>Ops! Sua sacola ainda está vazia.</span>
-    <span>Vem cá descobrir nossas fórmulas e esoclher a sua</span>
+    <% if @cart.products.blank? %>
+      <span>Ops! Sua sacola ainda está vazia.</span>
+      <span>Vem cá descobrir nossas fórmulas e esoclher a sua</span>
     <% else %>
-      <% render 'carts/show' %>
+      <%= render 'carts/show' %>
     <% end %>
   </div>
 </div>

@@ -1,0 +1,15 @@
+<div class="cart-products-container d-flex flex-column">
+  <% @cart.cart_skus.each do |cart_sku| %>
+    <div class="cart-product-card d-flex">
+        <div class="cart-product-img-div">
+          <%= cl_image_tag cart_sku.sku.product.photo.key, class: "cart-product-img" %>
+        </div>
+        <div class="cart-product-infos d-flex flex-column">
+          <div class="cart-product-name"><%= cart_sku.sku.product.name %></div>
+          <div class="cart-product-amount"><%= q = cart_sku.amount %></div>
+          <div class="cart-product-unit-price"><%= p = cart_sku.sku.price %></div>
+          <div class="cart-product-total-price"><%= p * q %></div>
+        </div>
+      </div>
+  <% end %>
+</div>

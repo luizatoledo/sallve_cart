@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :carts, only: [:show, :destroy]
   # products controller
   resources :produtcs, only: [:index]
+
+  resources :cart_skus, only: [:create]
 end
