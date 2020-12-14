@@ -1,11 +1,11 @@
 <div class="main-container d-flex my-5">
-  <div class="product-cards-container flex-grow-1">
+  <div class="product-cards-container ml-5 pr-5">
     <% @products.each do |product| %>
       <div class="product-card d-flex flex-column align-items-center">
         <div class="product-card-img-div">
           <%= cl_image_tag product.photo.key, class: "product-card-img" %>
         </div>
-        <div class="product-card-info">
+        <div class="product-card-info d-flex flex-column">
           <span class="product-card-name"><%= product.name %></span>
           <span class="product-card-price"><%= product.sku.price %></span>
         </div>
@@ -21,10 +21,13 @@
     <% end %>
   </div>
 
-  <div class="cart-container">
+  <div class="cart-container px-5 text-align-center d-flex justify-content-center">
     <% if @cart.products.blank? %>
-      <span>Ops! Sua sacola ainda está vazia.</span>
-      <span>Vem cá descobrir nossas fórmulas e esolher a sua</span>
+      <div class="empty-cart-message d-flex flex-column align-items-center">
+        <i class="fas fa-shopping-bag my-4"></i>
+        <span>Ops! Sua sacola ainda está vazia.</span>
+        <span>Vem cá descobrir nossas fórmulas e esolher a sua</span>
+      </div>
     <% else %>
       <%= render 'carts/show' %>
     <% end %>
