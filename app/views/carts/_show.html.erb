@@ -11,7 +11,7 @@
           <div class="cart-product-total-price"><%= p * q %></div>
         </div>
         <div class="remove-from-cart">
-          <%= link_to "Excluir", cart_sku_path(cart_sku), method: :delete, data: { confirm: 'Delete?' } %>
+          <%= link_to "Excluir", cart_sku, method: :delete %>
         </div>
       </div>
   <% end %>
