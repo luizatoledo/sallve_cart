@@ -1,10 +1,12 @@
 class CartSkusController < ApplicationController
   def create
-    CartSku.where()
-    @cart_sku = CartSku.new(cart_sku_params)
-    @cart_sku.cart = @cart
-    @cart_sku.save
-    redirect_to root_path
+    @cart_sku = CartSku.where(["cart_id = ? and sku_id = ?", @cart.id, params[:cart_sku][:sku_id]])
+    if @cart_sku.blank?
+      @cart_sku = CartSku.new(cart_sku_params)
+      @cart_sku.cart = @cart
+      @cart_sku.save
+      redirect_to root_path
+    end
   end
 
   def destroy
