@@ -11,6 +11,12 @@ class CartSkusController < ApplicationController
     end
   end
 
+  def update
+    @cart_sku = CartSku.find(params[:id])
+    @cart_sku.update(cart_sku_params)
+    redirect_to root_path
+  end
+
   def destroy
     @cart_sku = CartSku.find(params[:id])
     @cart_sku.destroy

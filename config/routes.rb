@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # products controller
   resources :produtcs, only: [:index]
 
-  resources :cart_skus, only: [:create, :destroy]
+  resources :cart_skus, only: [:create, :destroy, :update]
 end
