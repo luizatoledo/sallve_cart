@@ -13,8 +13,8 @@ class CartSkusController < ApplicationController
 
   def update
     @cart_sku = CartSku.find(params[:id])
-    @cart_sku.update(cart_sku_params)
-    redirect_to root_path
+    @cart_sku.update(amount: params[:amount])
+    render json: @cart_sku
   end
 
   def destroy
@@ -28,4 +28,9 @@ class CartSkusController < ApplicationController
   def cart_sku_params
     params.require(:cart_sku).permit(:amount, :sku_id)
   end
+
+  def new_amount
+    
+  end
+
 end

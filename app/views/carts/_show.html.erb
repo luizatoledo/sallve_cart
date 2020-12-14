@@ -6,18 +6,21 @@
         </div>
         <div class="cart-product-infos d-flex flex-column">
           <div class="cart-product-name"><%= cart_sku.sku.product.name %></div>
-          <div class="cart-product-amount"><%= q = cart_sku.amount %></div>
-          <div class="cart-product-unit-price">R$<%= p = cart_sku.sku.price %></div>
-          <div class="cart-product-total-price">R$<%= p * q %></div>
+          <div class="cart-product-numbers">
+            <div class="update-amount">
+              <%= simple_form_for(cart_sku, remote: true) do |f| %>
+                <%= f.input :amount, as: :numeric, input_html: { min: 1, step: 1 }, label:false %>
+              <% end %>
+            </div>
+            <div class="cart-sku-id d-none"><%= cart_sku.id %></div>
+            <div class="cart-product-unit-price">R$<%= p = cart_sku.sku.price %></div>
+            <div class="cart-product-total-price">R$ total</div>
+          </div>
         </div>
         <div class="remove-from-cart">
           <%= link_to "Excluir", cart_sku, method: :delete, remote: true %>
         </div>
-        <div class="update-amount">
-         <%= simple_form_for(cart_sku, remote: true, url: cart_sku_path(cart_sku), method: :patch, authenticity_token: true) do |f| %>
-            <%= f.input :amount, as: :numeric, input_html: { min: 1, step: 1 }, label:false %>
-         <% end %>
-        </div>
+        
       </div>
   <% end %>
   <div class="cart-total d-flex">
