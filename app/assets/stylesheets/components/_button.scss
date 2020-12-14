@@ -14,3 +14,12 @@
     color:rgb(51, 51, 51);
   }
 }
+
+.remove-from-cart-btn{
+  text-decoration: none;
+  color:grey;
+  &:hover{
+    text-decoration: none;
+    color:grey;
+  }
+}

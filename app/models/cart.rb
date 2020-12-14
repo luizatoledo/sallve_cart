@@ -11,7 +11,7 @@ class Cart < ApplicationRecord
 
   def total_price
     total = 0
-    self.cart_skus.each {|sku| total += sku.total_price.to_i}
-    total
+    self.cart_skus.each {|sku| total += sku.total_price.to_f}
+    '%.2f' % total
   end
 end

@@ -1,3 +1,14 @@
+.cart-title-div{
+  h4{
+    font-weight: 700;
+    margin: 0;
+    margin-left: 5px;
+  }
+  .fa-heart{
+    font-size: 30px;
+    font-weight: lighter;
+  }
+}
 .cart-product-img-div{
   width: 25%;
 }
@@ -9,7 +20,7 @@
 
 .fa-shopping-bag{
   font-size: 70px;
-  
+
 }
 
 .empty-cart-message{
@@ -19,4 +30,35 @@
 .empty-cart-text-main{
   font-family: $titles-font;
   font-size: 20px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  width: 60px;
+  text-align: center;
+}
+input[type="number"]:focus{
+  outline:none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cart-product-name{
+  h2{font-weight: 700;}
+}
+
+.cart-total-title{
+  font-weight: 700;
+  font-size:18px;
+
+}
+
+.cart-total-amount-sku{
+  position: absolute;
+  right: 31.97%;
+  font-size: 14px;
+  font-weight: 700;
 }

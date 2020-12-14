@@ -8,6 +8,9 @@
   .buy-button{
     height: 45px;
   }
+  .cart-product-name{
+    h2{font-size: 14px;}
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -21,6 +24,9 @@
   .buy-button{
     height: 50px;
   }
+  .cart-product-name{
+    h2{font-size: 16px;}
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -30,6 +36,9 @@
   .buy-button{
     height: 55px;
   }
+  .cart-product-name{
+    h2{font-size: 18px;}
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -38,5 +47,8 @@
   }
   .buy-button{
     height: 60px;
+  }
+  .cart-product-name{
+    h2{font-size: 20px;}
   }
 }
