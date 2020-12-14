@@ -1,7 +1,11 @@
 .product-cards-container{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px
+  grid-gap: 16px;
+  height: 100%;
+}
+.product-card{
+  height: 100%;
 }
 
 @media(max-width: 576px) {
@@ -15,7 +19,7 @@
 }
 
 .product-card-img-div{
-  height: 30vh;
+  height: 70%;
 }
 .product-card-img{
   height: 100%;
