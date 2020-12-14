@@ -8,6 +8,9 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+//Media queries
+@import"config/media";
+
 // Your CSS partials
 @import "components/index";
 @import "products/index";
