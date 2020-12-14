@@ -1,7 +1,7 @@
 <div class="main-container d-flex">
   <div class="product-cards-container flex-grow-1">
     <% @products.each do |product| %>
-      <div class="product-card">
+      <div class="product-card d-flex flex-column align-items-center">
         <div class="product-card-img-div">
           <%= cl_image_tag product.photo.key, class: "product-card-img" %>
         </div>
@@ -14,7 +14,7 @@
             <%= f.hidden_field :sku_id, value: product.sku.id %>
             <%= f.hidden_field :cart_id, value: @cart.id %>
             <%= f.hidden_field :amount, value: 1 %>
-            <%= f.button :submit, "Comprar", class: "btn btn-block"%>
+            <%= f.button :submit, "Comprar", class: "btn btn-block buy-button"%>
           <% end %>
         </div>
       </div>

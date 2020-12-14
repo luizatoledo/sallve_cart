@@ -6,3 +6,15 @@
   width: 100%;
   object-fit: cover;
 }
+
+.buy-button{
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    background-color: #FA8CFF;
+    color:rgb(51, 51, 51);
+  }
+}
