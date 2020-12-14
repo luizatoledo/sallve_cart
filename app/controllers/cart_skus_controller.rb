@@ -1,6 +1,8 @@
 class CartSkusController < ApplicationController
   def create
+    # first try to find a cart_sku with the current cart id and the sku id
     @cart_sku = CartSku.where(["cart_id = ? and sku_id = ?", @cart.id, params[:cart_sku][:sku_id]])
+    # if cannot find cart_sku, creates a new one
     if @cart_sku.blank?
       @cart_sku = CartSku.new(cart_sku_params)
       @cart_sku.cart = @cart
