@@ -1,6 +1,17 @@
+@media screen and (min-width: 576px) {
+  .product-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .product-cards-container{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   height: 100%;
 }
@@ -8,11 +19,6 @@
   height: 100%;
 }
 
-@media(max-width: 576px) {
-  .product-cards-container {
-    grid-template-columns: 1fr;
-  }
-}
 
 .product-card{
   height: 30vh;
