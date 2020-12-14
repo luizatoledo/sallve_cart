@@ -14,11 +14,8 @@
           <%= link_to "Excluir", cart_sku, method: :delete, remote: true %>
         </div>
         <div class="update-amount">
-         <%= simple_form_for(cart_sku, remote: true, url: cart_sku_path(cart_sku), method: :patch) do |f| %>
-            <%= f.hidden_field :sku_id, value: cart_sku.sku.id %>
-            <%= f.hidden_field :cart_id, value: @cart.id %>
+         <%= simple_form_for(cart_sku, remote: true, url: cart_sku_path(cart_sku), method: :patch, authenticity_token: true) do |f| %>
             <%= f.input :amount, as: :numeric, input_html: { min: 1, step: 1 }, label:false %>
-            <%= f.button :submit %>
          <% end %>
         </div>
       </div>
