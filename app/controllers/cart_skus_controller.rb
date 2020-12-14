@@ -5,9 +5,13 @@ class CartSkusController < ApplicationController
     # if cannot find cart_sku, creates a new one
     if @cart_sku.blank?
       @cart_sku = CartSku.new(cart_sku_params)
-      @cart_sku.cart = @cart
-      @cart_sku.save
-      redirect_to root_path
+      if @cart_sku.sku.inventory > 0
+        @cart_sku.cart = @cart
+        @cart_sku.save
+        new_inventory = @cart_sku.sku.inventory - 1
+        @cart_sku.sku.update(inventory: new_inventory)
+        redirect_to root_path
+      end
     end
   end
 
