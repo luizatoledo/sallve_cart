@@ -5,6 +5,10 @@ class CartSkusController < ApplicationController
     @cart_sku.save
   end
 
+  def destroy
+    @cart_sku = CartSku.find(params[:id])
+    redirect_to root_path
+  end
   private
 
   def cart_sku_params

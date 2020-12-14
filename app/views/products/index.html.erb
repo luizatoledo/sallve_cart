@@ -10,7 +10,7 @@
           <span class="product-card-price"><%= product.sku.price %></span>
         </div>
         <div class="add-to-card-button">
-          <%= simple_form_for(@cart_sku) do |f| %>
+          <%= simple_form_for(@cart_sku, remote: true) do |f| %>
             <%= f.hidden_field :sku_id, value: product.sku.id %>
             <%= f.hidden_field :cart_id, value: @cart.id %>
             <%= f.hidden_field :amount, value: 1 %>
