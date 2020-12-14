@@ -5,12 +5,12 @@
 
 // General style
 $font-family-sans-serif:  $body-font;
-$headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
+$headings-font-family:    $titles-font;
+$body-bg:                 $background;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
+$body-color: $font;
 $primary:    $blue;
 $success:    $green;
 $info:       $yellow;

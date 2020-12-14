@@ -1,11 +1,25 @@
+.add-to-card-button{
+  width: 100%;
+}
 .buy-button{
   border-radius: 3px;
   color: white;
   background-color: rgb(51, 51, 51);
   text-decoration: none;
+  font-family: $titles-font;
+  font-size: 20px;
   &:hover{
     text-decoration: none;
     background-color: #FA8CFF;
     color:rgb(51, 51, 51);
+  }
+}
+
+.remove-from-cart-btn{
+  text-decoration: none;
+  color:grey;
+  &:hover{
+    text-decoration: none;
+    color:grey;
   }
 }
