@@ -30,7 +30,11 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   # Changed from local to cloudinary
-  config.active_storage.service = :cloudinary
+  # config.active_storage.service = :cloudinary
+  config.active_storage.service = :local
+
+  # added this config so that seed can attach many photos without deleting already uploaded ones
+  config.active_storage.replace_on_assign_to_many = false
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

@@ -3,7 +3,7 @@
     <% @products.each do |product| %>
       <div class="product-card d-flex flex-column align-items-center mb-5">
         <div class="product-card-img-div">
-          <%= cl_image_tag product.photo.key, class: "product-card-img" %>
+          <%= image_tag product.photo, class: "product-card-img" %>
         </div>
         <div class="product-card-info d-flex flex-column">
           <h2 class="product-card-name my-2"><%= product.name %></h2>
