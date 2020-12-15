@@ -1,4 +1,6 @@
 class CartSkusController < ApplicationController
+  before_action :set_cart_sku, only: [:update, :destroy, :inventory_info]
+
   def create
     # first try to find a cart_sku with the current cart id and the sku id
     @cart_sku = CartSku.where(["cart_id = ? and sku_id = ?", @cart.id, params[:cart_sku][:sku_id]])
@@ -16,12 +18,10 @@ class CartSkusController < ApplicationController
         flash[:alert] = "ops! esse produto está esgotado... em breve teremos mais para você"
         redirect_to root_path
       end
-
     end
   end
 
   def update
-    @cart_sku = CartSku.find(params[:id])
     # should only be able to add to cart if inventory is still greater or equal, for the last item, than 0
     if @cart_sku.sku.inventory >= 0
       # subtract from inventory if client added to cart
@@ -39,7 +39,6 @@ class CartSkusController < ApplicationController
   end
 
   def destroy
-    @cart_sku = CartSku.find(params[:id])
     # when removing from cart, the inventory should go up again
     update_inventory(@cart_sku.sku, -@cart_sku.amount)
     @cart_sku.destroy
@@ -50,7 +49,15 @@ class CartSkusController < ApplicationController
     end
   end
   
+  def inventory_info
+    render json: {skuInventory: @cart_sku.sku.inventory }
+  end
+
   private
+
+  def set_cart_sku
+    @cart_sku = CartSku.find(params[:id])
+  end
 
   def cart_sku_params
     params.require(:cart_sku).permit(:amount, :sku_id, :cart_id)

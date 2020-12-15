@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # products controller
   resources :produtcs, only: [:index]
 
+  get "/cart_skus/:id/inventory", to: "cart_skus#inventory_info"
   resources :cart_skus, only: [:create, :destroy, :update]
 end
