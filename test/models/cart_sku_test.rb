@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CartSkuTest < ActiveSupport::TestCase
-  test "total_price return price * amount of skus in cart" do
+  test "total_price returns price * amount of 1 sku" do
     cart = Cart.new
     prod = Product.new(name: 'sérum antiacne')
     sku = Sku.new(sku: 1, inventory: 10, price: 59.9 )
