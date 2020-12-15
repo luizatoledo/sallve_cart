@@ -9,12 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= favicon_link_tag 'https://cdn.shopify.com/s/files/1/0074/3486/2639/files/favicon_32x32.png?v=1556291112' %>
   </head>
 
   <body>
     <header class="header d-flex justify-content-center py-5">
       <%= image_tag('logo-sallve') %>
     </header>
+    <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
 </html>

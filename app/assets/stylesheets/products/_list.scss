@@ -1,6 +1,9 @@
 .cart-container{
   width: 40vw;
   height: 100%;
+  position: sticky;
+  top: 25%;
+  z-index: 0;
 }
 
 .product-cards-container{

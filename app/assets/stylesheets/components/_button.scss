@@ -23,3 +23,16 @@
     color:grey;
   }
 }
+
+.update-amount-btns-size{
+  max-width: min-content;
+  max-height: min-content;
+  a{
+    padding:0;
+  }
+}
+
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}

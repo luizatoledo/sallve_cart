@@ -1,3 +1,7 @@
 .header{
   border-bottom: 1px solid #c4c8cc;
+  position: sticky;
+  top: 0;
+  background-color: $background;
+  z-index: 99;
 }

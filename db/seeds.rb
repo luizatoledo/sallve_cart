@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+# Deleting existing Structures
+CartSku.delete_all
+Sku.delete_all
+Product.delete_all
+
 # Creating Products on DB
 
 # Sérum Antiacne
