@@ -24,7 +24,11 @@ class CartSkusController < ApplicationController
   def destroy
     @cart_sku = CartSku.find(params[:id])
     @cart_sku.destroy
-    redirect_to root_path
+    url = request.base_url + root_path
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.json { render json: {delete: 'deleted', redirect: url } }
+    end
   end
   
   private

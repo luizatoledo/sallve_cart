@@ -12,10 +12,16 @@
         <div class="cart-product-infos d-flex flex-column flex-grow-1">
           <div class="cart-product-name"><h2><%= cart_sku.sku.product.name %></h2></div>
           <div class="cart-product-numbers d-flex justify-content-between align-items-center">
-            <div class="update-amount">
+            <div class="update-amount d-flex">
+              <div class="add-one-sku-button">
+                <%= link_to "+", "", remote: true, class: "btn" %>
+              </div>
               <%= simple_form_for(cart_sku, remote: true) do |f| %>
                 <%= f.input :amount, as: :numeric, input_html: { min: 1, step: 1 }, label:false %>
               <% end %>
+              <div class="remove-one-sku-button">
+                 <%= link_to "-", "", remote: true, class: "btn" %>
+              </div>
             </div>
             <div class="cart-sku-id d-none"><%= cart_sku.id %></div>
             <div class="cart-product-unit-price">R$<%= p = cart_sku.sku.price %></div>
@@ -23,9 +29,11 @@
           </div>
         </div>
         <div class="remove-from-cart">
+          
           <%= link_to cart_sku, method: :delete, remote: true, class: "remove-from-cart-btn" do %>
             <i class="far fa-times-circle"></i>
           <% end %>
+        
         </div>
         
       </div>

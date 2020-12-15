@@ -28,9 +28,13 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import {submitUpdateAmount} from '../components/submit_update_amount';
+import {addOneSku} from '../components/add_one_sku';
+import {removeOneSku} from '../components/remove_one_sku';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   submitUpdateAmount();
+  addOneSku();
+  removeOneSku();
 });
