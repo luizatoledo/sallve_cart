@@ -5,7 +5,7 @@
      <h4>sua sacola</h4>
   </div>
   <% @cart.cart_skus.each do |cart_sku| %>
-    <div class="cart-product-card d-flex justify-content-between my-2">
+    <div class="cart-product-card d-flex justify-content-between mt-4">
         <div class="cart-product-img-div mr-4">
           <%= cl_image_tag cart_sku.sku.product.photo.key, class: "cart-product-img" %>
         </div>
@@ -38,7 +38,7 @@
         
       </div>
   <% end %>
-  <div class="cart-total d-flex justify-content-between my-1">
+  <div class="cart-total d-flex justify-content-between my-1 mr-3">
     <div class="cart-total-title">total <%=  %></div>
      <div class="cart-total-price">R$<%= @cart.total_price %></div>
   </div>

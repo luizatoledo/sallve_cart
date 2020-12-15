@@ -64,7 +64,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .cart-total-amount-sku{
   position: absolute;
-  right: 31.97%;
+  right: 88.2%;
   font-size: 14px;
   font-weight: 700;
 }
@@ -86,3 +86,10 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+.cart-product-numbers{
+  margin-top: auto;
+}
+
+.cart-product-total-price, .cart-total-price{
+  font-weight: 700;
+}
