@@ -8,7 +8,8 @@ const submitUpdateAmount = () => {
         const value = event.currentTarget.value;
         const skuId = event.currentTarget.parentElement.parentElement.parentElement.nextElementSibling.innerText;
         const totalPrice = event.currentTarget.parentElement.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling;
-        const totalCartPriceElement = event.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling;
+        const totalCartPriceElement = document.querySelector('.cart-total-price');
+        const totalCartAmountElement = document.querySelector('.cart-total-amount-sku');
         const url = `${window.location.origin}/cart_skus/${skuId}`;
         fetch(url, {
           method: "PATCH",
@@ -22,7 +23,9 @@ const submitUpdateAmount = () => {
         .then((data) => {
           totalPrice.innerText = `R$ ${data.items_price}`;
           // totalCartPriceElement.querySelector('.cart-total-amount-sku').innerText = data.cart_amount;
-          totalCartPriceElement.querySelector('.cart-total-price').innerText = `R$ ${data.cart_price}`;
+          // totalCartPriceElement.querySelector('.cart-total-price').innerText = `R$ ${data.cart_price}`;
+          totalCartPriceElement.innerText = `R$ ${data.cart_price}`;
+          totalCartAmountElement.innerText = data.cart_amount;
         });
       });
     });

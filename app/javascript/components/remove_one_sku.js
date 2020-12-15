@@ -8,7 +8,6 @@ const removeOneSku = () => {
         const form = event.currentTarget.parentElement.previousElementSibling;
         let currentAmount = form.querySelector("#cart_sku_amount").value;
         const skuId = form.parentElement.parentElement.querySelector('.cart-sku-id').innerText;
-        console.log(skuId);
         if (currentAmount > 1) {
           currentAmount = Number.parseInt(currentAmount, 10) - 1;
           form.querySelector("#cart_sku_amount").value = currentAmount;
