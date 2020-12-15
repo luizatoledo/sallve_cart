@@ -34,8 +34,10 @@
 
 input[type="number"] {
   -moz-appearance: textfield;
-  width: 60px;
+  width: 45px;
   text-align: center;
+  border: none;
+  font-size: 20px;
 }
 
 input[type="number"]:disabled {
@@ -66,3 +68,21 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 14px;
   font-weight: 700;
 }
+
+.update-amount{
+  border: 1px solid #c4c8cc;
+  border-radius: 5%;
+  color: $font;
+  font-family: $titles-font;
+  font-size: 20px;
+  margin: 0;
+  height: min-content;
+  form{
+    height: 33px;
+    input{
+      padding:0;
+      height: 100%;
+    }
+  }
+}
+
