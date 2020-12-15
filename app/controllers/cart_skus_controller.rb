@@ -22,8 +22,8 @@ class CartSkusController < ApplicationController
 
   def update
     @cart_sku = CartSku.find(params[:id])
-    # should only be able to add to cart an amount that is lesser or equal then the inventory
-    if params[:amount].to_i <= @cart_sku.sku.inventory
+    # should only be able to add to cart if inventory is still greater or equal, for the last item, than 0
+    if @cart_sku.sku.inventory >= 0
       # subtract from inventory if client added to cart
       if @cart_sku.amount < params[:amount].to_i
         update_inventory(@cart_sku.sku, 1)
