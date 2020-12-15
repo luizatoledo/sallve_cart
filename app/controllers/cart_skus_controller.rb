@@ -26,10 +26,10 @@ class CartSkusController < ApplicationController
     if params[:amount].to_i <= @cart_sku.sku.inventory
       # subtract from inventory if client added to cart
       if @cart_sku.amount < params[:amount].to_i
-        update_inventory(@cart_sku.sku, params[:amount].to_i)
+        update_inventory(@cart_sku.sku, 1)
       # add to inventory if client removed from cart
       elsif @cart_sku.amount > params[:amount].to_i
-        update_inventory(@cart_sku.sku, -params[:amount].to_i)
+        update_inventory(@cart_sku.sku, -1)
       end
       @cart_sku.update(amount: params[:amount].to_i)
     else
@@ -40,6 +40,8 @@ class CartSkusController < ApplicationController
 
   def destroy
     @cart_sku = CartSku.find(params[:id])
+    # when removing from cart, the inventory should go up again
+    update_inventory(@cart_sku.sku, -@cart_sku.amount)
     @cart_sku.destroy
     url = request.base_url + root_path
     respond_to do |format|
