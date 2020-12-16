@@ -16,8 +16,8 @@ Product.delete_all
 
 # Sérum Antiacne
 antiacne = Product.create!(name: 'sérum antiacne')
-antiacne_pic = File.open('app/assets/images/antiacne.jpg')
-antiacne.photo.attach(io: antiacne_pic, filename:'antiacne.jpg', content_type: 'image/jpg')
+antiacne_pic = URI.open('https://cdn.shopify.com/s/files/1/0074/3486/2639/products/sa-carrossel-SA-sozinho.jpg?v=1607456887')
+antiacne.photo.attach(io: antiacne_pic, filename:'antiacne.png', content_type: 'image/png')
 
 # Antioxidante Hidratante
 antiox = Product.create!(name: 'antioxidante hidratante')

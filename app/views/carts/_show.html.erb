@@ -7,7 +7,11 @@
   <% @cart.cart_skus.each do |cart_sku| %>
     <div class="cart-product-card d-flex justify-content-between mt-4">
         <div class="cart-product-img-div d-flex align-items-center">
-          <%= image_tag cart_sku.sku.product.photo, class: "cart-product-img" %>
+          <% if ENV['RAILS_ENV'] == 'development' || ENV['RAILS_ENV'] == 'test'  %>
+            <%= image_tag cart_sku.sku.product.photo, class: "cart-product-img" %>
+          <% elsif ENV['RAILS_ENV'] == 'production' %>
+            <%= cl_image_tag cart_sku.sku.product.photo.key, class: "cart-product-img" %>
+          <% end %>
         </div>
         <div class="cart-product-infos d-flex flex-column flex-grow-1">
           <div class="cart-product-name"><h2><%= cart_sku.sku.product.name %></h2></div>
