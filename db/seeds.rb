@@ -16,7 +16,7 @@ Product.delete_all
 
 # Sérum Antiacne
 antiacne = Product.create!(name: 'sérum antiacne')
-antiacne_pic = File.open('../app/assets/images/antiacne.jpg')
+antiacne_pic = File.open('app/assets/images/antiacne.jpg')
 antiacne.photo.attach(io: antiacne_pic, filename:'antiacne.png', content_type: 'image/png')
 
 # Antioxidante Hidratante
