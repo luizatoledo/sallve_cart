@@ -6,7 +6,7 @@
   </div>
   <% @cart.cart_skus.each do |cart_sku| %>
     <div class="cart-product-card d-flex justify-content-between mt-4">
-        <div class="cart-product-img-div mr-4">
+        <div class="cart-product-img-div">
           <%= image_tag cart_sku.sku.product.photo, class: "cart-product-img" %>
         </div>
         <div class="cart-product-infos d-flex flex-column flex-grow-1">
