@@ -7,7 +7,7 @@
         </div>
         <div class="product-card-info d-flex flex-column">
           <h2 class="product-card-name my-2"><%= product.name %></h2>
-          <span class="product-card-price mb-3">R$ <%= product.sku.price %></span>
+          <span class="product-card-price mb-3">R$ <%= '%.2f' % product.sku.price %></span>
         </div>
         <div class="add-to-card-button">
           <%= simple_form_for(@cart_sku, remote: true) do |f| %>
