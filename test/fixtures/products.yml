@@ -1,0 +1,16 @@
+antiacne:
+  name: "sérum antiacne"
+antiox:
+  name: "antioxidante hidratante"
+tonico:
+  name: "tônico renovador"
+exfo:
+  name: "exfoliante enzimático"
+firmador:
+  name: "hidratante firmador"
+limpador:
+  name: "limpador facial"
+labial:
+  name: "hidratante labial"
+demaq:
+  name: "bálsamo demaquilante"
