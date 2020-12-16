@@ -15,8 +15,12 @@ $phone: 480px;
     .buy-button{
       height: 45px;
     }
+    .cart-container{
+      padding-left: 8px;
+      padding-right: 2px;
+    }
     .cart-product-name{
-      h2{font-size: 14px;}
+      h2{font-size: 12px;}
     }
     .empty-cart-text-main{
       font-size: 14px;
@@ -26,6 +30,25 @@ $phone: 480px;
     }
     .fa-shopping-bag{
       font-size: 45px;
+    }
+    .cart-product-img-div{
+      width: 25%;
+      margin-right: 5px;
+    }
+    input[type="number"] {
+      width: 25px;
+    }
+    .fa-times-circle{
+      font-size: 12px;
+    }
+    .cart-product-unit-price, .cart-product-total-price{
+      font-size: 14px;
+    }
+    .cart-total-amount-sku{
+      position: absolute;
+      right: 91.5%;
+      font-size: 14px;
+      font-weight: 700;
     }
   }
 }
@@ -44,8 +67,12 @@ $phone: 480px;
     .buy-button{
       height: 50px;
     }
-    .cart-product-name{
-      h2{font-size: 16px;}
+    .cart-container{
+      padding-left: 14px;
+      padding-right: 7px;
+    }
+     .cart-product-name{
+      h2{font-size: 14px;}
     }
     .empty-cart-text-main{
       font-size: 16px;
@@ -56,7 +83,10 @@ $phone: 480px;
     .fa-shopping-bag{
       font-size: 55px;
     }
-  }
+    .cart-product-img-div{
+      width: 25%;
+    }
+   }
 }
 
 @media screen and (min-width: $laptop) {
@@ -69,13 +99,16 @@ $phone: 480px;
       height: 55px;
     }
     .cart-product-name{
-      h2{font-size: 18px;}
+      h2{font-size: 16px;}
     }
     .empty-cart-text-main{
       font-size: 18px;
     }
     .fa-shopping-bag{
       font-size: 65px;
+    }
+    .cart-product-img-div{
+      width: 35%;
     }
   }
 }
@@ -92,6 +125,10 @@ $phone: 480px;
     .buy-button{
       height: 60px;
     }
+    .cart-container{
+      padding-left: 18px;
+      padding-right: 10px;
+    }
     .cart-product-name{
       h2{font-size: 18px;}
     }
@@ -101,9 +138,8 @@ $phone: 480px;
       font-size: 14px;
       font-weight: 700;
     }
-    input[type="number"] {
-      font-size: 20px;
-      margin-top: 2px;
+    .cart-product-img-div{
+      width: 25%;
     }
   }
 }
