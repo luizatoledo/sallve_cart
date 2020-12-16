@@ -7,6 +7,7 @@ $phone: 480px;
   body{
     .product-cards-container {
       grid-template-columns: 1fr;
+      max-width: 50vw;
     }
     .product-card-name{
       font-size: 14px;
@@ -16,6 +17,15 @@ $phone: 480px;
     }
     .cart-product-name{
       h2{font-size: 14px;}
+    }
+    .empty-cart-text-main{
+      font-size: 14px;
+    }
+    .empty-cart-text{
+      font-size: 12px;
+    }
+    .fa-shopping-bag{
+      font-size: 45px;
     }
   }
 }
@@ -29,12 +39,22 @@ $phone: 480px;
     }
     .product-card-name{
       font-size: 16px;
+      height: 40px;
     }
     .buy-button{
       height: 50px;
     }
     .cart-product-name{
       h2{font-size: 16px;}
+    }
+    .empty-cart-text-main{
+      font-size: 16px;
+    }
+    .empty-cart-text{
+      font-size: 14px;
+    }
+    .fa-shopping-bag{
+      font-size: 55px;
     }
   }
 }
@@ -43,12 +63,19 @@ $phone: 480px;
   body {
     .product-card-name{
       font-size: 18px;
+      height: 42px;
     }
     .buy-button{
       height: 55px;
     }
     .cart-product-name{
       h2{font-size: 18px;}
+    }
+    .empty-cart-text-main{
+      font-size: 18px;
+    }
+    .fa-shopping-bag{
+      font-size: 65px;
     }
   }
 }

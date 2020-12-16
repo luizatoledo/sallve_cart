@@ -20,7 +20,6 @@
 
 .fa-shopping-bag{
   font-size: 70px;
-
 }
 
 .empty-cart-message{
@@ -30,6 +29,10 @@
 .empty-cart-text-main{
   font-family: $titles-font;
   font-size: 20px;
+}
+
+.empty-cart-text{
+  font-size: 16px;
 }
 
 input[type="number"] {
