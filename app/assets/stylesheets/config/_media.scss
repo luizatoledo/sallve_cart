@@ -19,6 +19,10 @@ $phone: 480px;
       padding-left: 8px;
       padding-right: 2px;
     }
+    .cart-title-div{
+      h4{font-size: 18px;}
+      .fa-heart{font-size: 18px;}
+    }
     .cart-product-name{
       h2{font-size: 12px;}
     }
@@ -36,18 +40,24 @@ $phone: 480px;
       margin-right: 5px;
     }
     input[type="number"] {
-      width: 25px;
+      width: 20px;
       margin-top: 2px;
+      font-size: 12px;
     }
     .fa-times-circle{
       font-size: 12px;
     }
     .cart-product-unit-price, .cart-product-total-price{
-      font-size: 12px;
+      font-size: 10px;
     }
     .cart-total-amount-sku{
-      position: absolute;
-      right: 91.5%;
+      font-size: 12px;
+    }
+    .update-amount-btns-size{
+      .btn{font-size: 12px;}
+    }
+    .update-amount{
+      form{ height: 27px;}
     }
   }
 }
@@ -69,6 +79,10 @@ $phone: 480px;
     .cart-container{
       padding-left: 14px;
       padding-right: 7px;
+    }
+    .cart-title-div{
+      h4{font-size: 20px;}
+      .fa-heart{font-size: 20px;}
     }
     .empty-cart-text-main{
       font-size: 16px;
@@ -92,8 +106,7 @@ $phone: 480px;
       font-size: 12px;
     }
     .cart-total-amount-sku{
-      position: absolute;
-      right: 88%;
+      font-size: 12px;
     }
    }
 }
@@ -131,8 +144,7 @@ $phone: 480px;
       font-size: 16px;
     }
     .cart-total-amount-sku{
-      position: absolute;
-      right: 91%;
+      font-size: 12px;
     }
   }
 }
@@ -161,8 +173,8 @@ $phone: 480px;
     }
     input[type="number"] {
       width: 28px;
-      font-size: 20px;
-      margin-top: 2px;
+      font-size: 16px;
+      margin-top: 0;
     }
     .fa-times-circle{
       font-size: 16px;
@@ -171,8 +183,7 @@ $phone: 480px;
       font-size: 16px;
     }
     .cart-total-amount-sku{
-      position: absolute;
-      right: 91.5%;
+      font-size: 12px;
     }
   }
 }

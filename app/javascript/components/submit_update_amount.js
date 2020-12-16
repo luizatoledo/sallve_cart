@@ -22,10 +22,8 @@ const submitUpdateAmount = () => {
         }).then(response => response.json())
         .then((data) => {
           totalPrice.innerText = `R$ ${data.items_price}`;
-          // totalCartPriceElement.querySelector('.cart-total-amount-sku').innerText = data.cart_amount;
-          // totalCartPriceElement.querySelector('.cart-total-price').innerText = `R$ ${data.cart_price}`;
           totalCartPriceElement.innerText = `R$ ${data.cart_price}`;
-          totalCartAmountElement.innerText = data.cart_amount;
+          totalCartAmountElement.innerText = `(${data.cart_amount})`;
         });
       });
     });
