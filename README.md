@@ -1,17 +1,18 @@
 # Sallve Cart
 ***
 ## Project Description
----
 This project simulates a simple shopping cart for online Sallve Store.
 It has some basic features such as viewing a list of products, adding a product to the cart, updating the amounts and removing items.
 
 [See Online](https://sallve-cart.herokuapp.com/ "Sallve Cart Project")
 
 ## Screenshots and Videos
----
+![screenshot]('screenshot.png')
+
+![laptop]('gif_laptop_screen.gif')
 
 ## Tech and Framework
----
+
 * Ruby on Rails
 * JavasCript
 * HTML
@@ -20,7 +21,7 @@ It has some basic features such as viewing a list of products, adding a product 
 * Git and GitHub
 
 ## Installation
----
+
 ### Check Ruby Version
 ```
 ruby -v
@@ -60,6 +61,6 @@ rails db:seed
 ```
 rails s
 ```
+Go to localhost:3000 in browser
 ## Credits
----
 Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
