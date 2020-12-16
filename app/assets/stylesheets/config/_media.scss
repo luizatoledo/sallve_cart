@@ -58,7 +58,7 @@ $phone: 480px;
     .product-cards-container {
       grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
-      max-width: 70vw;
+      max-width: 57vw;
     }
     .product-card-name{
       font-size: 16px;
@@ -71,9 +71,6 @@ $phone: 480px;
       padding-left: 14px;
       padding-right: 7px;
     }
-     .cart-product-name{
-      h2{font-size: 14px;}
-    }
     .empty-cart-text-main{
       font-size: 16px;
     }
@@ -84,7 +81,25 @@ $phone: 480px;
       font-size: 55px;
     }
     .cart-product-img-div{
-      width: 25%;
+      width: 35%;
+      margin-right: 5px;
+    }
+    input[type="number"] {
+      width: 20px;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    .fa-times-circle{
+      font-size: 12px;
+    }
+    .cart-product-unit-price, .cart-product-total-price{
+      font-size: 12px;
+    }
+    .cart-total-amount-sku{
+      position: absolute;
+      right: 88%;
+      font-size: 14px;
+      font-weight: 700;
     }
    }
 }
@@ -109,6 +124,12 @@ $phone: 480px;
     }
     .cart-product-img-div{
       width: 35%;
+    }
+    .cart-total-amount-sku{
+      position: absolute;
+      right: 91%;
+      font-size: 14px;
+      font-weight: 700;
     }
   }
 }
