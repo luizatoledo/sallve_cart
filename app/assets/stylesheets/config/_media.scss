@@ -1,54 +1,82 @@
-@media screen and (min-width: 576px) {
-  .product-cards-container {
-    grid-template-columns: 1fr;
-  }
-  .product-card-name{
-    font-size: 14px;
-  }
-  .buy-button{
-    height: 45px;
-  }
-  .cart-product-name{
-    h2{font-size: 14px;}
+$desktop: 1200px;
+$laptop: 992px;
+$tablet:768px;
+$phone: 480px;
+
+@media screen and (min-width: $phone) {
+  body{
+    .product-cards-container {
+      grid-template-columns: 1fr;
+    }
+    .product-card-name{
+      font-size: 14px;
+    }
+    .buy-button{
+      height: 45px;
+    }
+    .cart-product-name{
+      h2{font-size: 14px;}
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
-  .product-cards-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 60vw;
-  }
-  .product-card-name{
-    font-size: 16px;
-  }
-  .buy-button{
-    height: 50px;
-  }
-  .cart-product-name{
-    h2{font-size: 16px;}
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .product-card-name{
-    font-size: 18px;
-  }
-  .buy-button{
-    height: 55px;
-  }
-  .cart-product-name{
-    h2{font-size: 18px;}
+@media screen and (min-width: $tablet) {
+  body {
+    .product-cards-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      max-width: 70vw;
+    }
+    .product-card-name{
+      font-size: 16px;
+    }
+    .buy-button{
+      height: 50px;
+    }
+    .cart-product-name{
+      h2{font-size: 16px;}
+    }
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .product-card-name{
-    font-size: 20px;
+@media screen and (min-width: $laptop) {
+  body {
+    .product-card-name{
+      font-size: 18px;
+    }
+    .buy-button{
+      height: 55px;
+    }
+    .cart-product-name{
+      h2{font-size: 18px;}
+    }
   }
-  .buy-button{
-    height: 60px;
-  }
-  .cart-product-name{
-    h2{font-size: 20px;}
+}
+
+@media screen and (min-width: $desktop) {
+  body{
+    .product-cards-container{
+      width: 100%;
+      max-width: 70vw;
+    }
+    .product-card-name{
+      font-size: 20px;
+    }
+    .buy-button{
+      height: 60px;
+    }
+    .cart-product-name{
+      h2{font-size: 18px;}
+    }
+    .cart-total-amount-sku{
+      position: absolute;
+      right: 85.5%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    input[type="number"] {
+      font-size: 20px;
+      margin-top: 2px;
+    }
   }
 }
