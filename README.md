@@ -7,7 +7,7 @@ It has some basic features such as viewing a list of products, adding a product 
 [See Online](https://sallve-cart.herokuapp.com/ "Sallve Cart Project")
 
 ## Screenshots and Videos
-![screenshot](screenshot.png)
+![screenshot](screenshot.PNG)
 
 ![laptop](gif_laptop_screen.gif)
 
