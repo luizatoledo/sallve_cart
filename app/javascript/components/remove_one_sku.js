@@ -5,9 +5,11 @@ const removeOneSku = () => {
   if (minusButtons){
     minusButtons.forEach( (button) => {
       button.addEventListener('click',(event) => {
-        const form = event.currentTarget.parentElement.previousElementSibling;
+        //const form = event.currentTarget.parentElement.previousElementSibling;
+        const form = event.currentTarget.parentElement.nextElementSibling;
         let currentAmount = form.querySelector("#cart_sku_amount").value;
-        const skuId = form.parentElement.parentElement.querySelector('.cart-sku-id').innerText;
+        //const skuId = form.parentElement.parentElement.querySelector('.cart-sku-id').innerText;
+        const skuId = form.parentElement.nextElementSibling.innerText;
         if (currentAmount > 1) {
           currentAmount = Number.parseInt(currentAmount, 10) - 1;
           form.querySelector("#cart_sku_amount").value = currentAmount;
