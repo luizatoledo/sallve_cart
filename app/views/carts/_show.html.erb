@@ -28,7 +28,7 @@
               </div>
             </div>
             <div class="cart-sku-id d-none"><%= cart_sku.id %></div>
-            <div class="cart-product-unit-price">R$<%= p = cart_sku.sku.price %></div>
+            <div class="cart-product-unit-price">R$<%= '%.2f' % cart_sku.sku.price %></div>
             <div class="cart-product-total-price">R$<%= cart_sku.total_price %></div>
           </div>
         </div>
